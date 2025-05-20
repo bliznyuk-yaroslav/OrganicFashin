@@ -1,0 +1,53 @@
+.heroWrapper {
+  padding-top: 121px;
+  padding-bottom: 131px;
+  display: flex;
+  gap: 145px;
+  align-items: center;
+  justify-content: center;
+  background: #faf9f8;
+}
+.imgHero {
+  width: 578px;
+  height: 596px;
+  flex-shrink: 0;
+}
+.heroHeader {
+  color: #000;
+  font-family: "Crimson Text";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 7.2px;
+}
+.textHero {
+  color: #000;
+  font-family: "Crimson Text";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 535px;
+  height: 105px;
+}
+.btn {
+  color: #fff;
+  font-family: "Crimson Text";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 3px;
+  outline: none;
+  border: none;
+  border-radius: 59px;
+  background: #8e9a82;
+  width: 206px;
+  height: 55px;
+}
+.contTextHero {
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
+}
