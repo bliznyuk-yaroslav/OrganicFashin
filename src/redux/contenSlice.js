@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import heroImg from "../images/image 1.png";
+import heroImg from "../images/image 1.jpg";
 import shop1 from "../images/shop1.jpg";
 import shop2 from "../images/shop2.jpg";
 import shop3 from "../images/shop3.jpg";
@@ -7,8 +7,8 @@ import shop4 from "../images/shop4.jpg";
 import collection1 from "../images/collection1.jpg";
 import collection2 from "../images/collection2.jpg";
 import collection3 from "../images/collection3.jpg";
-import follow from "../images/follow.png";
-import about from "../images/AboutUs.png";
+import follow from "../images/follow.jpg";
+import about from "../images/AboutUs.jpg";
 
 const initialState = {
   heroSection: {

@@ -1,6 +1,6 @@
 import Title from "../Title/Title";
 import s from "./AboutUs.module.scss";
-import imgAbout from "../../images/AboutUs.png";
+import imgAbout from "../../images/AboutUs.jpg";
 import { useState } from "react";
 import LearnModal from "../LearnModal/LearnModal";
 import { useSelector } from "react-redux";
