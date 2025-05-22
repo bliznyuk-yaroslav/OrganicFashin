@@ -3,6 +3,7 @@ import Collection from "../../components/Colllection/Collection";
 import FollowUs from "../../components/FollowUs/FollowUs";
 import Headers from "../../components/Headers/Headers";
 import Hero from "../../components/Hero/Hero";
+import ScrollToTop from "../../components/ScrollToTop/ScrollToTop";
 import Shop from "../../components/Shop/Shop";
 import s from "./HomePage.module.scss";
 
@@ -13,7 +14,7 @@ export default function HomePage() {
       <div id="home">
         <Hero />
       </div>
-      {/* <div id="shop">
+      <div id="shop">
         <Shop />
       </div>
       <div id="blog">
@@ -24,7 +25,8 @@ export default function HomePage() {
       </div>
       <div id="contact">
         <FollowUs />
-      </div> */}
+      </div>
+      <ScrollToTop />
     </section>
   );
 }

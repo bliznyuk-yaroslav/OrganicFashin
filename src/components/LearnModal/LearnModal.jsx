@@ -30,7 +30,7 @@ export default function LearnModal({ onClose, isOpen }) {
     >
       <div className={s.box}>
         <span className={s.iconClose} onClick={onClose}>
-          <RiCloseLargeFill size={28} />
+          <RiCloseLargeFill />
         </span>
         <Title title="About ORGANIC FASHION" s={s} />
         <p className={s.text}>

@@ -1,31 +1,79 @@
 .collectionWrapper {
   background: linear-gradient(to bottom, #f1f1f1 50%, #dbdbdb 50%);
-  padding: 82px 0 150px 0;
+  padding: 38px 0 62px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  @include media(tablet) {
+    padding: 40px 0 70px 0;
+  }
+  @include media(desktop) {
+    padding: 82px 0 150px 0;
+  }
+  @include media(desktop-2k) {
+    padding: 123px 0 133px 0;
+  }
 }
 .title {
   color: #000;
   text-align: center;
   font-family: "Crimson Text";
-  font-size: 32px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  letter-spacing: 4.8px;
-  margin-bottom: 88px;
-  margin-bottom: 104px;
+  letter-spacing: 3px;
+  margin-bottom: 25px;
+  @include media(tablet) {
+    font-size: 32px;
+    letter-spacing: 4.8px;
+    width: 300px;
+  }
+  @include media(desktop) {
+    margin-bottom: 88px;
+    width: 100%;
+  }
+  @include media(desktop-2k) {
+    margin-bottom: 149px;
+    font-size: 48px;
+    letter-spacing: 7.2px;
+  }
 }
 .collectionText {
-  width: 967px;
-  margin-top: 65px;
+  width: 298px;
+  margin-top: 25px;
   color: #000;
   text-align: center;
   font-family: "Crimson Text";
-  font-size: 32px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  letter-spacing: 4.8px;
+  letter-spacing: 2.25px;
+  @include media(tablet) {
+    margin-top: 47px;
+    width: 750px;
+    font-size: 32px;
+    letter-spacing: 4.8px;
+  }
+  @include media(desktop) {
+    margin-top: 62px;
+    width: 967px;
+  }
+  @include media(desktop-2k) {
+    font-size: 40px;
+    letter-spacing: 6px;
+    width: 1346px;
+    margin-top: 94px;
+  }
+}
+.boxTitle {
+  @include media(tablet) {
+    display: flex;
+    justify-content: center;
+  }
+  @include media(desktop) {
+  }
+  @include media(desktop-2k) {
+  }
 }

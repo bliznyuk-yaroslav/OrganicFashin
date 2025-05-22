@@ -1,22 +1,70 @@
 .shopCont {
-  padding-top: 60px;
+  padding-top: 19px;
+  @include media(tablet) {
+    padding-top: 25px;
+  }
+  @include media(desktop) {
+    padding-top: 60px;
+  }
+  @include media(desktop-2k) {
+    padding-top: 80px;
+  }
 }
 .title {
   color: #000;
   text-align: center;
   font-family: "Crimson Text";
-  font-size: 32px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  letter-spacing: 4.8px;
-  margin-bottom: 88px;
+  letter-spacing: 3px;
+  margin-bottom: 25px;
+  @include media(tablet) {
+    font-size: 32px;
+    letter-spacing: 4.8px;
+    width: 300px;
+  }
+  @include media(desktop) {
+    margin-bottom: 88px;
+    width: 100%;
+  }
+  @include media(desktop-2k) {
+    margin-bottom: 42px;
+    font-size: 48px;
+    letter-spacing: 7.2px;
+  }
 }
 .backImg {
-  margin-top: 13px;
-  width: 1366px;
-  height: 263px;
+  margin-top: 10px;
+  width: 375px;
+  height: 89px;
   background-image: url("../../images/Rectangle\ 7.png");
   background-repeat: no-repeat;
   background-size: cover;
+  @include media(tablet) {
+    width: 992px;
+    height: 185px;
+    margin-top: 8px;
+  }
+  @include media(desktop) {
+    width: 1366px;
+    height: 263px;
+    margin-top: 13px;
+  }
+  @include media(desktop-2k) {
+    width: 1920px;
+    height: 263px;
+    margin-top: 18px;
+  }
+}
+.boxTitle {
+  @include media(tablet) {
+    display: flex;
+    justify-content: center;
+  }
+  @include media(desktop) {
+  }
+  @include media(desktop-2k) {
+  }
 }

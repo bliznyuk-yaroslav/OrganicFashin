@@ -7,7 +7,9 @@ export default function Shop() {
   const { title } = useSelector(selectorShopSection);
   return (
     <section className={s.shopCont}>
-      <Title title={title} s={s} />
+      <div className={s.boxTitle}>
+        <Title title={title} s={s} />
+      </div>
       <SwiperImg />
       <div className={s.backImg}></div>
     </section>

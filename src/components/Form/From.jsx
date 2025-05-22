@@ -1,7 +1,7 @@
 import { useState } from "react";
 import s from "./Form.module.scss";
 import clsx from "clsx";
-
+import { toast } from "react-hot-toast";
 export default function Form() {
   const [formData, setFormData] = useState({
     name: "",
@@ -13,14 +13,22 @@ export default function Form() {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await fetch("https://hook.eu2.make.com/fnm6yrhv7lwx1kvme34ystrqwfo0uhf5", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
-    setFormData({ name: "", email: "", message: "" });
+    try {
+      await fetch(
+        "https://hook.eu2.make.com/fnm6yrhv7lwx1kvme34ystrqwfo0uhf5",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+      setFormData({ name: "", email: "", message: "" });
+      toast.success("Ваше повідомлення надіслано!");
+    } catch (error) {
+      toast.error("Щось пішло не так. Спробуйте ще раз.");
+    }
   };
   return (
     <form className={s.form} onSubmit={handleSubmit}>

@@ -1,12 +1,13 @@
 import { NavLink } from "react-router-dom";
 import s from "./Nav.module.scss";
 
-export default function Nav() {
+export default function Nav({ onClose }) {
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
+    if (onClose) onClose();
   };
   return (
     <nav className={s.nav}>

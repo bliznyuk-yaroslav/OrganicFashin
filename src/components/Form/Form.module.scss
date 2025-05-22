@@ -1,14 +1,28 @@
 .form {
   height: 100%;
-
   margin-top: 33px;
+  @include media(desktop-2k) {
+    margin-top: 62px;
+  }
 }
 .inputWrapper {
   position: relative;
-  width: 561px;
+  width: 257px;
   height: 81px;
   margin-top: 10px;
   box-sizing: border-box;
+  @include media(tablet) {
+    width: 437px;
+    height: 64px;
+  }
+  @include media(desktop) {
+    width: 561px;
+    height: 81px;
+  }
+  @include media(desktop-2k) {
+    width: 617px;
+    height: 121px;
+  }
 }
 .input {
   width: 100%;
@@ -20,9 +34,8 @@
   outline: none;
   line-height: 1;
   color: #000;
-
   font-family: "Crimson Text";
-  font-size: 20px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -30,39 +43,92 @@
     opacity: 0;
     visibility: hidden;
   }
+  @include media(tablet) {
+    font-size: 20px;
+  }
+  @include media(desktop-2k) {
+    font-size: 36px;
+  }
 }
 .label {
   position: absolute;
-  top: 18px;
-  left: 23px;
+  top: 10px;
+  left: 13px;
   color: #aaa;
   pointer-events: none;
   color: #000;
   font-family: "Crimson Text";
-  font-size: 20px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  @include media(tablet) {
+    font-size: 20px;
+    top: 18px;
+    left: 23px;
+  }
+  @include media(desktop-2k) {
+  }
+  @include media(desktop-2k) {
+    font-size: 36px;
+  }
 }
 .inputMessage {
   min-height: 130px;
   resize: none;
+  @include media(tablet) {
+    min-height: 101px;
+  }
+  @include media(desktop) {
+    min-height: 130px;
+  }
+  @include media(desktop-2k) {
+    min-height: 194px;
+  }
 }
 .btn {
-  width: 205px;
-  height: 59px;
+  width: 257px;
+  height: 47px;
   border-radius: 10px;
   background: #8e9a82;
   border: none;
   color: #fff;
   text-align: center;
   font-family: "Crimson Text";
-  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  letter-spacing: 3px;
   margin-top: 41px;
+  font-size: 15px;
+  letter-spacing: 2.25px;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease,
+    transform 0.3s ease;
+  &:hover {
+    background: #6f7c63;
+    color: #f5f5f5;
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  @include media(tablet) {
+    width: 436px;
+    height: 46px;
+    font-size: 20px;
+    letter-spacing: 3px;
+    margin-top: 31px;
+  }
+  @include media(desktop) {
+    width: 205px;
+    height: 59px;
+    margin-top: 41px;
+  }
+  @include media(desktop-2k) {
+    font-size: 36px;
+    letter-spacing: 5.4px;
+    width: 371px;
+    height: 88px;
+    margin-top: 74px;
+  }
 }
 .hidden {
   opacity: 0;

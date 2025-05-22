@@ -1,6 +1,4 @@
 import { Suspense } from "react";
-import Headers from "../Headers/Headers";
-import s from "./App.module.scss";
 import { Route, Routes } from "react-router-dom";
 import Layout from "../Layout/Layout";
 import HomePage from "../../page/HomePage/HomePage";

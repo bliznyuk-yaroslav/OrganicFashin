@@ -41,6 +41,7 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  text-align: center;
   letter-spacing: 4.8px;
 }
 .iconClose {
@@ -48,14 +49,22 @@
   right: 20px;
   top: 20px;
   cursor: pointer;
+  font-size: 20px;
+  @include media(tablet) {
+    font-size: 28px;
+  }
 }
 .text {
-  width: 600px;
+  width: 450px;
   color: #000;
   font-family: "Crimson Text";
-  font-size: 20px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   text-align: center;
+  @include media(tablet) {
+    width: 600px;
+    font-size: 20px;
+  }
 }

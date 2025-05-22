@@ -1,23 +1,59 @@
 .container {
-  background: linear-gradient(to right, #f1f1f1 68%, #dbdbdb 32%);
-  padding: 78px 150px 78px 150px;
+  background: linear-gradient(to bottom, #f1f1f1 68%, #dbdbdb 32%);
   display: flex;
   gap: 62px;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  padding: 34px 0 77px 0px;
+  @include media(tablet) {
+    justify-content: space-between;
+    background: linear-gradient(to right, #f1f1f1 68%, #dbdbdb 32%);
+    flex-direction: row;
+    padding: 78px 118px 78px 90px;
+  }
+  @include media(desktop) {
+    padding: 78px 150px 78px 150px;
+  }
+  @include media(desktop-2k) {
+    padding: 116px 154px 143px 274px;
+  }
 }
 .title {
   color: #000;
   font-family: "Crimson Text";
-  font-size: 32px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  letter-spacing: 4.8px;
+  letter-spacing: 3px;
+  text-align: center;
+  @include media(tablet) {
+    text-align: start;
+    font-size: 32px;
+    letter-spacing: 4.8px;
+  }
+  @include media(desktop) {
+  }
+  @include media(desktop-2k) {
+    font-size: 48px;
+    letter-spacing: 7.2px;
+  }
 }
 .img {
-  width: 439px;
-  height: 624px;
+  width: 243px;
+  height: 345px;
   object-fit: cover;
+  @include media(tablet) {
+    width: 302px;
+    height: 429px;
+  }
+  @include media(desktop) {
+    width: 439px;
+    height: 624px;
+  }
+  @include media(desktop-2k) {
+    width: 657px;
+    height: 935px;
+  }
 }

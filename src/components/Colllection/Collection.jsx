@@ -1,16 +1,20 @@
+import { useSelector } from "react-redux";
 import ImgCollection from "../ImgCollection/ImgCollection";
 import Title from "../Title/Title";
 import s from "./Collection.module.scss";
+import { selectorCollectionSection } from "../../redux/selectors";
 
 export default function Collection() {
+  const { title, categories, subtitle } = useSelector(
+    selectorCollectionSection
+  );
   return (
     <section className={s.collectionWrapper}>
-      <Title title="NEW COLLECTION" s={s} />
-      <ImgCollection />
-      <p className={s.collectionText}>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry.
-      </p>
+      <div className={s.boxTitle}>
+        <Title title={title} s={s} />
+      </div>
+      <ImgCollection categories={categories} />
+      <p className={s.collectionText}>{subtitle}</p>
     </section>
   );
 }

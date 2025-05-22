@@ -5,6 +5,7 @@ import "swiper/css/autoplay";
 import { Autoplay } from "swiper/modules";
 import { useSelector } from "react-redux";
 import { selectorShopSection } from "../../redux/selectors";
+import { useMediaQuery } from "../../hooks/useMediaQuery";
 
 export default function SwiperImg() {
   const categories = useSelector(selectorShopSection);
@@ -13,12 +14,20 @@ export default function SwiperImg() {
     ...categories.categories,
     ...categories.categories,
   ];
+  // Використання кастомного хука, длля відслідковування медіа
+  const is2k = useMediaQuery("(min-width: 1920px)");
+  const isDesktop = useMediaQuery("(min-width: 1366px)");
+  const isTablet = useMediaQuery("(min-width: 922px)");
+  let slideWidth = 134;
+  if (is2k) slideWidth = 518;
+  else if (isDesktop) slideWidth = 369;
+  else if (isTablet) slideWidth = 270;
 
   return (
     <Swiper
       modules={[Autoplay]}
-      slidesPerView={4}
-      spaceBetween={16}
+      slidesPerView="auto"
+      spaceBetween={8}
       speed={5000}
       loop={true}
       autoplay={{
@@ -30,7 +39,7 @@ export default function SwiperImg() {
       grabCursor={false}
     >
       {extendedImages.map((item, index) => (
-        <SwiperSlide key={index}>
+        <SwiperSlide key={index} style={{ width: `${slideWidth}px` }}>
           <img className={s.img} src={item.image} alt={item.name} />
         </SwiperSlide>
       ))}

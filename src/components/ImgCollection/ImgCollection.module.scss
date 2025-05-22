@@ -1,11 +1,56 @@
 .collectionCont {
   display: flex;
   justify-content: center;
-  gap: 75px;
+  gap: 28px;
+  overflow: hidden;
+  width: 100%;
+  @include media(tablet) {
+    gap: 54px;
+  }
+  @include media(desktop) {
+    gap: 75px;
+  }
+}
+
+.boxImg {
+  width: 143px;
+  height: 154px;
+  display: block;
+  flex-shrink: 0;
+  @include media(tablet) {
+    width: 262px;
+    height: 264px;
+  }
+  @include media(desktop) {
+    width: 340px;
+    height: 345px;
+  }
+  @include media(desktop-2k) {
+    width: 502px;
+    height: 506px;
+  }
 }
 .img {
-  width: 340px;
-  height: 345px;
+  width: 100%;
+  height: 100%;
   border-radius: 170px 170px 0px 0px;
   object-fit: cover;
+}
+
+.boxImg:nth-child(2) {
+  width: 177px;
+  height: 179px;
+
+  @include media(tablet) {
+    width: 262px;
+    height: 264px;
+  }
+  @include media(desktop) {
+    width: 340px;
+    height: 345px;
+  }
+  @include media(desktop-2k) {
+    width: 502px;
+    height: 506px;
+  }
 }

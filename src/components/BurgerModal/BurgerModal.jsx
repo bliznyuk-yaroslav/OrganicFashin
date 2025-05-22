@@ -35,7 +35,7 @@ export default function BurgerModal({ onClose, isOpen }) {
         <span className={s.iconClose} onClick={onClose}>
           <RiCloseLargeFill size={20} />
         </span>
-        <Nav />
+        <Nav onClose={onClose} />
       </div>
     </div>
   );

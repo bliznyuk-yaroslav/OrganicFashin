@@ -1,56 +1,163 @@
 .title {
   color: #000;
+  text-align: center;
   font-family: "Crimson Text";
-  font-size: 32px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  letter-spacing: 4.8px;
-  margin-bottom: 37px;
+  letter-spacing: 3px;
+  margin-bottom: 13px;
+  @include media(tablet) {
+    text-align: start;
+    font-size: 32px;
+    letter-spacing: 4.8px;
+    width: 300px;
+    margin-bottom: 29px;
+  }
+  @include media(desktop) {
+    margin-bottom: 37px;
+    width: 100%;
+  }
+  @include media(desktop-2k) {
+    margin-bottom: 42px;
+    font-size: 48px;
+    letter-spacing: 7.2px;
+  }
 }
 .containerAbout {
   display: flex;
   gap: 35px;
-  flex-direction: row;
-  padding: 50px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  padding: 23px 0 90px 0;
+  @include media(tablet) {
+    flex-direction: row;
+    gap: 45px;
+    padding: 83px 0 45px 0;
+  }
+  @include media(desktop) {
+    flex-direction: row;
+    padding: 50px 0 93px 0;
+    align-items: start;
+    gap: 60px;
+  }
+  @include media(desktop-2k) {
+    padding: 160px 0 93px 0;
+  }
 }
 .imgCont {
-  width: 417px;
-  height: 717px;
-  padding: 32px;
+  position: absolute;
+  top: 380px;
+  width: 200px;
+  height: 250px;
+  @include media(tablet) {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 532px;
+  }
+  @include media(desktop) {
+    width: 350px;
+    height: 600px;
+  }
+  @include media(desktop-2k) {
+    width: 600px;
+    height: 1058px;
+  }
 }
 .img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  @include media(tablet) {
+  }
+  @include media(desktop) {
+  }
+  @include media(desktop-2k) {
+  }
 }
 .contText {
-  width: 724px;
-  margin-top: 50px;
+  width: 280px;
+  text-align: center;
+  @include media(tablet) {
+    text-align: start;
+    width: 565px;
+    // margin-left: 350px;
+  }
+  @include media(desktop) {
+    width: 724px;
+    margin-top: 30px;
+  }
+  @include media(desktop-2k) {
+    width: 1084px;
+    margin-top: 50px;
+  }
 }
 .text {
   color: #000;
   font-family: "Crimson Text";
-  font-size: 20px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  @include media(tablet) {
+    font-size: 20px;
+  }
+  @include media(desktop-2k) {
+    font-size: 36px;
+  }
 }
 .text + .text {
-  margin-top: 20px;
+  margin-top: 300px;
+
+  @include media(tablet) {
+    margin-top: 20px;
+  }
 }
 .btn {
-  width: 205px;
-  height: 59px;
+  width: 149px;
+  height: 43px;
   border-radius: 10px;
   border: 5px solid #8e9a82;
   background: #faf9f8;
   color: #000;
   font-family: "Crimson Text";
-  font-size: 20px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  letter-spacing: 3px;
-  margin-top: 45px;
+  letter-spacing: 2.1px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease,
+    transform 0.3s ease;
+  &:hover {
+    background: #6f7c63;
+    color: #f5f5f5;
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  @include media(tablet) {
+    width: 194px;
+    height: 46px;
+    font-size: 20px;
+    letter-spacing: 3px;
+  }
+  @include media(desktop) {
+    width: 205px;
+    height: 59px;
+    margin-top: 45px;
+  }
+  @include media(desktop-2k) {
+    margin-top: 70px;
+    font-size: 36px;
+    letter-spacing: 5.4px;
+    width: 350px;
+    height: 88px;
+  }
 }
