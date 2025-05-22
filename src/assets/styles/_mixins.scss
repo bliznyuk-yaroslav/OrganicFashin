@@ -20,10 +20,10 @@
     }
   }
 }
-@mixin font($_fsz, $_lnh) {
-  font-size: #{$_fsz}px;
+// @mixin font($_fsz, $_lnh) {
+//   font-size: #{$_fsz}px;
 
-  $result: math.div($_lnh, $_fsz);
+//   $result: math.div($_lnh, $_fsz);
 
-  line-height: math.div(math.round($result * 100), 100);
-}
+//   line-height: math.div(math.round($result * 100), 100);
+// }

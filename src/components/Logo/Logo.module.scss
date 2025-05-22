@@ -9,7 +9,7 @@
   width: 221px;
 
   @include media(desktop-2k) {
-    
+    font-size: 32px;
     width: 500px;
   }
 }

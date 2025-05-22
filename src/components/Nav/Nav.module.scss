@@ -1,11 +1,35 @@
 .nav {
   display: flex;
-  gap: 60px;
+  flex-direction: column;
+  gap: 20px;
+  @include media(tablet) {
+    flex-direction: row;
+    display: flex;
+    gap: 40px;
+    color: #000;
+    font-family: "Crimson Text";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  @include media(desktop) {
+    gap: 60px;
+  }
+  @include media(desktop-2k) {
+    font-size: 32px;
+  }
+}
+.btn {
+  border: none;
+  background-color: transparent;
   color: #000;
-
   font-family: "Crimson Text";
-  font-size: 32px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  @include media(desktop-2k) {
+    font-size: 32px;
+  }
 }

@@ -1,0 +1,38 @@
+.cont {
+  position: absolute;
+  width: 100vh;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+}
+.accInf {
+  position: fixed;
+  width: 218px;
+  height: 100%;
+  background: #8e9a82;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(100%);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  @include media(tablet) {
+    display: none;
+  }
+}
+.active {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: all;
+}
+.iconClose {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}

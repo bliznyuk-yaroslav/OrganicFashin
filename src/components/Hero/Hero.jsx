@@ -1,20 +1,29 @@
+import { selectorHeroSection } from "../../redux/selectors";
 import s from "./Hero.module.scss";
-import heroImg from "../../images/image 1.png";
+
+import { useSelector } from "react-redux";
 export default function Hero() {
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  const { title, subtitle, image } = useSelector(selectorHeroSection);
+
   return (
     <section className={s.heroWrapper}>
       <div>
-        <img src={heroImg} alt="HeroImg" className={s.imgHero} />
+        <img src={image} alt="HeroImg" className={s.imgHero} />
       </div>
       <div className={s.contTextHero}>
-        <h1 className={s.heroHeader}>ORGANIC FASHION</h1>
-        <p className={s.textHero}>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book.
-        </p>
-        <button className={s.btn}>SHOP NOW</button>
+        <h1 className={s.heroHeader}>{title}</h1>
+        <div className={s.heroBox}>
+          <p className={s.textHero}>{subtitle}</p>
+          <button className={s.btn} onClick={() => scrollToSection("shop")}>
+            SHOP NOW
+          </button>
+        </div>
       </div>
     </section>
   );

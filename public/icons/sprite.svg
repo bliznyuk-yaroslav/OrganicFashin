@@ -1,0 +1,10 @@
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="icon-burger" viewBox="0 0 43 32">
+<path fill="#8e9a82" style="fill: var(--color1, #8e9a82)" d="M4.085 0h34.723c2.256 0 4.085 1.829 4.085 4.085v23.83c0 2.256-1.829 4.085-4.085 4.085h-34.723c-2.256 0-4.085-1.829-4.085-4.085v-23.83c0-2.256 1.829-4.085 4.085-4.085z"></path>
+<path fill="#d9d9d9" style="fill: var(--color2, #d9d9d9)" d="M7.489 14.298h27.915v3.404h-27.915v-3.404z"></path>
+<path fill="#d9d9d9" style="fill: var(--color2, #d9d9d9)" d="M7.489 23.149h27.915v3.404h-27.915v-3.404z"></path>
+<path fill="#d9d9d9" style="fill: var(--color2, #d9d9d9)" d="M7.489 5.447h27.915v3.404h-27.915v-3.404z"></path>
+</symbol>
+</defs>
+</svg>

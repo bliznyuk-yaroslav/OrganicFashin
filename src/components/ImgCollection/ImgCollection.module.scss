@@ -1,0 +1,11 @@
+.collectionCont {
+  display: flex;
+  justify-content: center;
+  gap: 75px;
+}
+.img {
+  width: 340px;
+  height: 345px;
+  border-radius: 170px 170px 0px 0px;
+  object-fit: cover;
+}

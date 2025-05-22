@@ -2,5 +2,30 @@
   display: flex;
   justify-content: space-between;
   background: #faf9f8;
-  padding: 84px 40px 0 84px;
+  align-items: center;
+  padding: 16px 25px;
+
+  @include media(tablet) {
+    padding: 46px 61px 0 61px;
+  }
+  @include media(desktop) {
+    padding: 73px 144px 0 144px;
+  }
+  @include media(desktop-2k) {
+    padding: 84px 200px 0 200px;
+  }
+}
+.icon {
+  width: 63px;
+  height: 47px;
+
+  @include media(tablet) {
+    display: none;
+  }
+}
+.visNavMobile {
+  display: none;
+  @include media(tablet) {
+    display: block;
+  }
 }
