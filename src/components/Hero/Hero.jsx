@@ -9,13 +9,15 @@ export default function Hero() {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
-  const { title, subtitle, image } = useSelector(selectorHeroSection);
+  const { title, subtitle, image, imageRetina } =
+    useSelector(selectorHeroSection);
 
   return (
     <section className={s.heroWrapper}>
-      <div>
-        <img src={image} alt="HeroImg" className={s.imgHero} />
-      </div>
+      <picture>
+        <source srcSet={imageRetina} media="(min-resolution: 1.5dppx)" />
+        <img src={image} alt="Follow img" className={s.imgHero} />
+      </picture>
       <div className={s.contTextHero}>
         <h1 className={s.heroHeader}>{title}</h1>
         <div className={s.heroBox}>

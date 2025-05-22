@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import heroImg from "../images/image 1.jpg";
+import heroImgRetina from "../images/image 1@2x.jpg";
 import shop1 from "../images/shop1.jpg";
 import shop2 from "../images/shop2.jpg";
 import shop3 from "../images/shop3.jpg";
@@ -8,6 +9,7 @@ import collection1 from "../images/collection1.jpg";
 import collection2 from "../images/collection2.jpg";
 import collection3 from "../images/collection3.jpg";
 import follow from "../images/follow.jpg";
+import follow2 from "../images/follow 2@.jpg";
 import about from "../images/AboutUs.jpg";
 
 const initialState = {
@@ -16,6 +18,7 @@ const initialState = {
     subtitle:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     image: heroImg,
+    imageRetina: heroImgRetina,
   },
   shopSection: {
     title: "SHOP BY CATEGORIES",
@@ -68,6 +71,7 @@ const initialState = {
   followUs: {
     title: "FOLLOW US",
     images: follow,
+    imagesRetina: follow2,
   },
 };
 const contentSlice = createSlice({
